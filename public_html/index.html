@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome to Vowel Checker 2016</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML,CSS,TABLE,FROMS,JAVASCRIPT">
+        <meta name="author" content="Douglas A Malcolm">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <script src="js/script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- Content -->
+        <div id="page_container">
+            <div id="user-input">
+                <!-- Application Header -->
+                <h2>Welcome to Vowel Checker 2016</h2>
+                <i class="instructions">Please enter 10+ characters</i>
+                <!-- End Application Header -->
+                <textarea id="layout" onkeyup="word_counter(this.value);"></textarea>
+                <div>
+                    <!-- display total character count entered by user -->
+                    <p>
+                    <label>Word count: </label>
+                    <input type="text" id="word-count" value="0" readonly="readonly">
+                    </p>
+                    <br/>
+                    <!-- display total vowel percentage compared to content entered by user -->
+                    <p>
+                    <label>Vowel %: </label>
+                    <input type="text" id="vowel-percentage" value="0" readonly="readonly">
+                    </p>
+            </div>
+            </div>
+            <!-- Div displaying vowel result and find button -->    
+            <div id="user-operations">
+                <!-- Table -->
+                <table>
+                    <!-- Table header -->
+                    <thead>
+                        <tr>
+                            <td>Vowels</td><td>Occurrences Found</td><td>%</td>
+                        </tr>
+                    </thead>
+                    <!-- End Table header -->
+                    <!-- Table Body -->
+                    <tbody>
+                        <tr>
+                            <td class="lables">A</td>
+                            <td>
+                                 <!-- input textbox to display occurrences found for this vowel-->
+                                <input type="text" name="a" id="a" readonly="readonly" class="results">
+                            </td>
+                            <td>
+                                <!-- displays the percentage of this vowel when compared to total content and other vowels -->
+                                <div id="div-a"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td>
+                                 <!-- input textbox to display occurrences found for this vowel-->
+                                <input type="text" name="a" id="e" readonly="readonly" class="results">
+                            </td>
+                            <td>
+                                <!-- displays the percentage of this vowel when compared to total content and other vowels -->
+                                <div id="div-e"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>I</td>
+                            <td>
+                                <!-- input textbox to display occurrences found for this vowel-->
+                                <input type="text" name="a" id="i" readonly="readonly" class="results">
+                            </td>
+                            <td>
+                                <!-- displays the percentage of this vowel when compared to total content and other vowels -->
+                                <div id="div-i"></div>
+                            </td>                    
+                        </tr>
+                        <tr>
+                            <td>O</td>
+                            <td>
+                                 <!-- input textbox to display occurrences found for this vowel-->
+                                <input type="text" name="a" id="o" readonly="readonly" class="results">
+                            </td>
+                            <td>
+                                <!-- displays the percentage of this vowel when compared to total content and other vowels -->
+                                <div id="div-o"></div>
+                            </td>                    
+                        </tr>
+                        <tr>
+                            <td>U</td>
+                            <td>
+                                 <!-- input textbox to display occurrences found for this vowel-->
+                                <input type="text" name="a" id="u" readonly="readonly" class="results">
+                            </td>
+                            <td>
+                                <!-- displays the percentage of this vowel when compared to total content and other vowels -->
+                                <div id="div-u"></div>
+                            </td>                    
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <button id="analysis" name="analysis" onclick="analyze();" disabled="disabled">Find Vowels</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!-- End Table Body -->
+                </table>
+                <!-- End Table -->   
+            </div>
+            <!-- End Div displaying vowel result and find button -->
+        </div>
+        <!-- Content --> 
+    </body>
+</html>
